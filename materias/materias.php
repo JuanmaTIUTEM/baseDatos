@@ -187,99 +187,101 @@
         <!-- Modal -->
         <div class="modal fade" id="modalMateria" tabindex="-1" aria-labelledby="modalMateriaLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalMateriaLabel">Crear Nueva Materia</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <form id="materiaForm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalMateriaLabel">Crear Nueva Materia</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            
+                                <div class="mb-3">
+                                    <label for="nombreMateria" class="form-label">Nombre de la Materia</label>
+                                    <input type="text" class="form-control" id="nombreMateria" name="nombreMateria" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="objetivoAprendizaje" class="form-label">Objetivo de Aprendizaje</label>
+                                    <textarea class="form-control" id="objetivoAprendizaje" name="objetivoAprendizaje" rows="3" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="competencias" class="form-label">Competencias</label>
+                                    <textarea class="form-control" id="competencias" name="competencias" rows="3" required></textarea>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-around">
+                                    <div class="mb-3">
+                                        <label for="cuatrimestre" class="form-label">Cuatrimestre</label>
+                                        <input type="text" class="form-control" id="cuatrimestre" name="cuatrimestre" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="horasTeoricas" class="form-label">Horas Teóricas</label>
+                                        <input type="number" class="form-control" id="horasTeoricas" name="horasTeoricas" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="horasPracticas" class="form-label">Horas Prácticas</label>
+                                        <input type="number" class="form-control" id="horasPracticas" name="horasPracticas" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="horasTotalesSemanaCuatrimestre" class="form-label">Horas Totales por Semana Cuatrimestre</label>
+                                        <input type="number" class="form-control" id="horasTotalesSemanaCuatrimestre" name="horasTotalesSemanaCuatrimestre" required>
+                                    </div>
+                                </div>
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="unidades-tab" data-bs-toggle="tab" href="#unidades" role="tab" aria-controls="unidades" aria-selected="true">Unidades de Aprendizaje</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="evaluacion-tab" data-bs-toggle="tab" href="#evaluacion" role="tab" aria-controls="evaluacion" aria-selected="false">Proceso de Evaluación</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="ensenanza-tab" data-bs-toggle="tab" href="#ensenanza" role="tab" aria-controls="ensenanza" aria-selected="false">Proceso de Enseñanza-Aprendizaje</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="capacidades-tab" data-bs-toggle="tab" href="#capacidades" role="tab" aria-controls="capacidades" aria-selected="false">Capacidades Derivadas</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="fuentes-tab" data-bs-toggle="tab" href="#fuentes" role="tab" aria-controls="fuentes" aria-selected="false">Fuentes Bibliográficas</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active container shadow-lg p-4 mb-4 bg-white" id="unidades" role="tabpanel" aria-labelledby="unidades-tab">
+                                        <div id="unidadesContainer"></div> <hr>
+                                        <div class="d-flex justify-content-end">
+                                            <button type="button" class="btn btn-outline-primary mt-3" id="agregarUnidadBtn">Agregar Unidad de Aprendizaje</button>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade container shadow-lg p-4 mb-4 bg-white" id="evaluacion" role="tabpanel" aria-labelledby="evaluacion-tab">
+                                        <div id="procesoEvaluacionContainer"></div> <hr>
+                                        <div class="d-flex justify-content-end">
+                                            <button type="button" class="btn btn-outline-primary mt-3" id="agregarEvaluacionBtn">Agregar Proceso de Evaluación</button>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade container shadow-lg p-4 mb-4 bg-white" id="ensenanza" role="tabpanel" aria-labelledby="ensenanza-tab">
+                                        <div id="procesoEnsenanzaContainer"></div> <hr>
+                                        <div class="d-flex justify-content-end">
+                                            <button type="button" class="btn btn-outline-primary mt-3" id="agregarEnsenanzaBtn">Agregar Proceso de Enseñanza-Aprendizaje</button>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade container shadow-lg p-4 mb-4 bg-white" id="capacidades" role="tabpanel" aria-labelledby="capacidades-tab">
+                                        <div id="capacidadesContainer"></div> <hr>
+                                        <div class="d-flex justify-content-end">
+                                            <button type="button" class="btn btn-outline-primary mt-3" id="agregarCapacidadBtn">Agregar Capacidad Derivada</button>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade container shadow-lg p-4 mb-4 bg-white" id="fuentes" role="tabpanel" aria-labelledby="fuentes-tab">
+                                        <div id="fuentesContainer"></div> <hr>
+                                        <div class="d-flex justify-content-end">
+                                            <button type="button" class="btn btn-outline-primary mt-3" id="agregarFuenteBtn">Agregar Fuente Bibliográfica</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary" id="guardarMateria">Guardar Materia</button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <form id="materiaForm">
-                            <div class="mb-3">
-                                <label for="nombreMateria" class="form-label">Nombre de la Materia</label>
-                                <input type="text" class="form-control" id="nombreMateria" name="nombreMateria" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="objetivoAprendizaje" class="form-label">Objetivo de Aprendizaje</label>
-                                <textarea class="form-control" id="objetivoAprendizaje" name="objetivoAprendizaje" rows="3" required></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label for="competencias" class="form-label">Competencias</label>
-                                <textarea class="form-control" id="competencias" name="competencias" rows="3" required></textarea>
-                            </div>
-                            <div class="d-flex flex-wrap justify-content-around">
-                                <div class="mb-3">
-                                    <label for="cuatrimestre" class="form-label">Cuatrimestre</label>
-                                    <input type="text" class="form-control" id="cuatrimestre" name="cuatrimestre" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="horasTeoricas" class="form-label">Horas Teóricas</label>
-                                    <input type="number" class="form-control" id="horasTeoricas" name="horasTeoricas" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="horasPracticas" class="form-label">Horas Prácticas</label>
-                                    <input type="number" class="form-control" id="horasPracticas" name="horasPracticas" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="horasTotalesSemanaCuatrimestre" class="form-label">Horas Totales por Semana Cuatrimestre</label>
-                                    <input type="number" class="form-control" id="horasTotalesSemanaCuatrimestre" name="horasTotalesSemanaCuatrimestre" required>
-                                </div>
-                            </div>
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="unidades-tab" data-bs-toggle="tab" href="#unidades" role="tab" aria-controls="unidades" aria-selected="true">Unidades de Aprendizaje</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="evaluacion-tab" data-bs-toggle="tab" href="#evaluacion" role="tab" aria-controls="evaluacion" aria-selected="false">Proceso de Evaluación</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="ensenanza-tab" data-bs-toggle="tab" href="#ensenanza" role="tab" aria-controls="ensenanza" aria-selected="false">Proceso de Enseñanza-Aprendizaje</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="capacidades-tab" data-bs-toggle="tab" href="#capacidades" role="tab" aria-controls="capacidades" aria-selected="false">Capacidades Derivadas</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="fuentes-tab" data-bs-toggle="tab" href="#fuentes" role="tab" aria-controls="fuentes" aria-selected="false">Fuentes Bibliográficas</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active container shadow-lg p-4 mb-4 bg-white" id="unidades" role="tabpanel" aria-labelledby="unidades-tab">
-                                    <div id="unidadesContainer"></div> <hr>
-                                    <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn btn-outline-primary mt-3" id="agregarUnidadBtn">Agregar Unidad de Aprendizaje</button>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade container shadow-lg p-4 mb-4 bg-white" id="evaluacion" role="tabpanel" aria-labelledby="evaluacion-tab">
-                                    <div id="procesoEvaluacionContainer"></div> <hr>
-                                    <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn btn-outline-primary mt-3" id="agregarEvaluacionBtn">Agregar Proceso de Evaluación</button>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade container shadow-lg p-4 mb-4 bg-white" id="ensenanza" role="tabpanel" aria-labelledby="ensenanza-tab">
-                                    <div id="procesoEnsenanzaContainer"></div> <hr>
-                                    <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn btn-outline-primary mt-3" id="agregarEnsenanzaBtn">Agregar Proceso de Enseñanza-Aprendizaje</button>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade container shadow-lg p-4 mb-4 bg-white" id="capacidades" role="tabpanel" aria-labelledby="capacidades-tab">
-                                    <div id="capacidadesContainer"></div> <hr>
-                                    <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn btn-outline-primary mt-3" id="agregarCapacidadBtn">Agregar Capacidad Derivada</button>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade container shadow-lg p-4 mb-4 bg-white" id="fuentes" role="tabpanel" aria-labelledby="fuentes-tab">
-                                    <div id="fuentesContainer"></div> <hr>
-                                    <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn btn-outline-primary mt-3" id="agregarFuenteBtn">Agregar Fuente Bibliográfica</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary" id="guardarMateria">Guardar Materia</button>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
 

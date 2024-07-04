@@ -1,8 +1,8 @@
 <?php 
 
 $servername = "localhost";
-$username = "adbdlogin";
-$password = "S.HdZmFPM!SNg5Rw";
+$username = "root";
+$password = "";
 $dbname = "login";
 
 // Crear la conexión
