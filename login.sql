@@ -57,7 +57,7 @@ CREATE TABLE `catpersons` (
   `personPhone` varchar(20) NOT NULL,
   `dtCreatedAt` datetime DEFAULT CURRENT_TIMESTAMP,
   `bActive` bit(1) DEFAULT b'1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `catpersons`
@@ -90,7 +90,7 @@ CREATE TABLE `catusers` (
   `dependence` varchar(200) DEFAULT NULL,
   `dtCreatedAt` datetime DEFAULT CURRENT_TIMESTAMP,
   `bActive` bit(1) DEFAULT b'1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `catusers`
@@ -116,7 +116,7 @@ CREATE TABLE `catusertypes` (
   `userType` varchar(50) NOT NULL,
   `typeDesc` varchar(200) DEFAULT NULL,
   `dtCreatedAt` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `catusertypes`
@@ -144,7 +144,7 @@ CREATE TABLE `sessions` (
   `dtLogIn` datetime DEFAULT NULL,
   `dtLogOut` datetime DEFAULT NULL,
   `bActive` bit(1) DEFAULT b'1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 

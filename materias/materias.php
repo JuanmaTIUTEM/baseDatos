@@ -187,7 +187,7 @@
         <!-- Modal -->
         <div class="modal fade" id="modalMateria" tabindex="-1" aria-labelledby="modalMateriaLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl modal-dialog-scrollable">
-                <form id="materiaForm">
+                <form id="materiaForm" action="../php/guardar_datos.php" method="POST">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modalMateriaLabel">Crear Nueva Materia</h5>
@@ -278,7 +278,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-primary" id="guardarMateria">Guardar Materia</button>
+                            <button type="submit" class="btn btn-primary" id="guardar" name="guardar">Guardar Materia</button>
                         </div>
                     </div>
                 </form>

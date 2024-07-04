@@ -73,7 +73,7 @@ CREATE TABLE `capacidadesderivadas` (
   `materia_id` int DEFAULT NULL,
   `capacidad` text,
   `criterios_desempeno` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -90,7 +90,7 @@ CREATE TABLE `fuentesbibliograficas` (
   `ciudad` varchar(255) DEFAULT NULL,
   `pais` varchar(255) DEFAULT NULL,
   `editorial` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -111,7 +111,7 @@ CREATE TABLE `materias` (
   `bActivo` bit(1) NOT NULL DEFAULT b'1',
   `feCreated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `feUpdated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `materias`
@@ -131,7 +131,7 @@ CREATE TABLE `metodosenseñanza` (
   `materia_id` int DEFAULT NULL,
   `metodos_tecnicas` text,
   `medios_materiales` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -145,7 +145,7 @@ CREATE TABLE `procesoevaluacion` (
   `resultado_aprendizaje` text,
   `secuencia_aprendizaje` text,
   `instrumentos_reactivos` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -160,7 +160,7 @@ CREATE TABLE `temas` (
   `saber` text,
   `saber_hacer` text,
   `ser` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -176,7 +176,7 @@ CREATE TABLE `unidadesaprendizaje` (
   `horas_practicas` int DEFAULT NULL,
   `horas_totales` int DEFAULT NULL,
   `objetivo_unidad` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 

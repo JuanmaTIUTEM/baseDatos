@@ -13,10 +13,10 @@ $horasTotalesSemanaCuatrimestre = $_POST['horasTotalesSemanaCuatrimestre'];
 $competencias = $_POST['competencias'];
 
 
-$sql ="INSERT INTO `materias`(`nombre`, `competencias`, `cuatrimestre`, `horas_teoricas`, `horas_practicas`, `horas_totales`, `horas_semanales`, `objetivo_aprendizaje`) VALUES ('$nombreMateria','$competencias','[$cuatrimestre',$horasTeoricas,'$horasPracticas',$horasTotalesSemanaCuatrimestre,'[value-7]','[value-8]')"
+$sql ="INSERT INTO `materias`(`nombre`, `competencias`, `cuatrimestre`, `horas_teoricas`, `horas_practicas`, `horas_totales`, `horas_semanales`, `objetivo_aprendizaje`) VALUES ('$nombreMateria','$competencias','[$cuatrimestre',$horasTeoricas,'$horasPracticas',$horasTotalesSemanaCuatrimestre,'[value-7]','[value-8]')";
 
-$queryMaterias = "CALL AgregarMateria ('$nombreMateria','$objetivoAprendizaje','$cuatrimestre',$horasTeoricas,$horasPracticas,$horasTotalesSemanaCuatrimestre,'$competencias')"
-
+$queryMaterias = "CALL AgregarMateria ('$nombreMateria','$objetivoAprendizaje','$cuatrimestre',$horasTeoricas,$horasPracticas,$horasTotalesSemanaCuatrimestre,'$competencias');";
+echo "<br> <h4>Codigo a ejecutar en phpmyadmin:</h4>";
 echo $queryMaterias;
 
 $conn->close();
