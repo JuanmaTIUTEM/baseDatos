@@ -222,7 +222,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="horasTotalesSemanaCuatrimestre" class="form-label">Horas Totales por Semana Cuatrimestre</label>
-                                        <input type="number" class="form-control" id="horasTotalesSemanaCuatrimestre" name="horasTotalesSemanaCuatrimestre" required>
+                                        <input type="number" class="form-control" id="horasSemanales" name="horasSemanales" required>
                                     </div>
                                 </div>
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">

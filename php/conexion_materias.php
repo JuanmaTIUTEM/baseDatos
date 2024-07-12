@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "root";//adminAsignaturas
+$password = "";//dAH0*_292X-uHFoR
 $dbname = "bdasignaturas";
 
 // Crear la conexión
